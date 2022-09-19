@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_offline_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Offline Data Load"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/facility_text"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/button_offline_load"
+        android:text="FACILITY"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textSize="22sp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/facility_text"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        tools:ignore="MissingClass" />
+
+    <TextView
+        android:id="@+id/exclusion_text"
+        android:layout_below="@+id/recycler_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="EXCLUSION"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="22sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/exclusive_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exclusion_text"
+        tools:ignore="MissingClass" />
+
+</RelativeLayout>
